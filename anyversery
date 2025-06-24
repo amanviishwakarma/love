@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aman ❤️ Gauri - Happy Anniversary</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to bottom, #fdeff9, #ec38bc, #7303c0);
+      color: white;
+      overflow-x: hidden;
+    }
+    .section {
+      padding: 4rem 2rem;
+    }
+    .heart {
+      position: fixed;
+      top: -10px;
+      left: 50%;
+      font-size: 24px;
+      animation: fall 3s linear forwards;
+    }
+    @keyframes fall {
+      to {
+        transform: translateY(100vh);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body class="text-center font-sans" onclick="dropHearts(event)">
+  <audio autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <header class="section">
+    <h1 class="text-4xl font-bold animate-pulse">Happy 1st Anniversary ❤️</h1>
+    <p class="text-xl mt-4">Aman + Gauri</p>
+  </header>
+
+  <section class="section bg-white text-black rounded-3xl mx-4 my-4">
+    <h2 class="text-3xl font-semibold mb-4">Our Story</h2>
+    <ul class="text-left text-lg space-y-4">
+      <li><strong>📖 15 June 2024:</strong> Library mein pehli baar dekha tha, aankhon mein kuch baat thi, lekin alfaaz nahi mile.</li>
+      <li><strong>🌸 20 June 2024:</strong> Umrao Mall mein pehli mulaqat, pehli baar samne baithe, dil pe pehla asar pada.</li>
+      <li><strong>📞 22 June 2024:</strong> Pehli baar lambi baat hui phone par, raat ho gayi lekin dil nahi bhara.</li>
+      <li><strong>💬 24 June 2024:</strong> Pehla message – “Theek hai aap?”... aur tab se baat ruki hi nahi.</li>
+      <li><strong>🌧️ 28 June 2024:</strong> Baarish mein bheeg gaye poore, lekin dil aur kareeb aa gaya.</li>
+      <li><strong>🛵 29 June 2024:</strong> Pehli long ride, hawa se zyada khushi thi mere peechhe aapke hone ki.</li>
+      <li><strong>🍦 2 July 2024:</strong> Gazal wali ice cream, ek chhoti si date, lekin yaadgaar ban gayi.</li>
+      <li><strong>🦷 4 July 2024:</strong> Aapne haath kaata – sabse pyara dard tha woh.</li>
+      <li><strong>☕ 6 July 2024:</strong> Ever Pie reunion – jitna maine aapko miss kiya, aapki aankhon mein bhi tha.</li>
+      <li><strong>💋 21 July 2024:</strong> Riverfront par pehla kiss, aisa lagaa jaise waqt ruk gaya ho.</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2 class="text-3xl font-semibold">A Letter From Aman To Gauri</h2>
+    <p class="text-lg mt-6 max-w-3xl mx-auto leading-relaxed">
+      (Yahan woh full emotional letter paste hoga jo pehle likha gaya tha)
+    </p>
+  </section>
+
+  <footer class="section">
+    <h3 class="text-2xl animate-bounce">Will You Be Mine Forever? 💍</h3>
+    <p class="mt-2 text-xl">I Love You Gauri ❤️<br/>Forever Yours, Aman</p>
+  </footer>
+
+  <script>
+    function dropHearts(e) {
+      for (let i = 0; i < 5; i++) {
+        let heart = document.createElement("div");
+        heart.className = "heart";
+        heart.style.left = `${e.clientX + (Math.random() * 100 - 50)}px`;
+        heart.style.top = `${e.clientY}px`;
+        heart.textContent = ["❤️","💕","🥰","💖","😍"][Math.floor(Math.random() * 5)];
+        document.body.appendChild(heart);
+        setTimeout(() => heart.remove(), 3000);
+      }
+    }
+  </script>
+</body>
+</html>
